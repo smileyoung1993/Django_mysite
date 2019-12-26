@@ -6,7 +6,13 @@
         <div>
             <h1><a href="">SMILEYOUNG Blog</a></h1>
         </div>
-
+        {% for post in posts %}
+            <div>
+                <h2>Post_ID: {{ post.id }}</h2>
+                <h3><a href="">{{ post.title }}</a></h3>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
         <div>
             <p>published: 26.12.2019, 13:28</p>
             <h2><a href="">My first post</a></h2>
